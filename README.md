@@ -75,7 +75,8 @@ The input parameter values of both the passive and active suspension systems for
 
 The equations of motion considered for both the passive and the active suspension systems are derived using Newton second law of motion. 
 
+https://latex.codecogs.com/gif.latex?F%3Dma
 
-
+[](https://latex.codecogs.com/png.latex?F%3Dma)
 
 
