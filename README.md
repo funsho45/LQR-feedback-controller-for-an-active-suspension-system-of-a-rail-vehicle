@@ -161,7 +161,7 @@ Figure 11: A full-state feedback block diagram
 
 A popular type of state feedback control that provides a systematic way of determining the control gain, K, is the LQR controller. The LQR approach will be used for the controller design for the active suspension system, as it is one of more classic control options for linear MIMO time-invariant systems and is simple enough to design. The advantages of using an LQR controller is that the factors affecting the performance index can be weighted depending on the desired result of the individual. Improving the rail handling ability in the ride comfort of the quarter rail model will be the focus of the LQR approach.
 
-The primary function of an LQR controller is to minimise the cost function, J, the performance index seen in equation 14, and calculate the optimal gain K:
+The primary function of an LQR controller is to minimise the cost function, J, the performance index seen in equation 12, and calculate the optimal gain K:
 
 ![image](https://user-images.githubusercontent.com/73448401/100002881-218eaf00-2dbd-11eb-9d08-ebfc48406942.png)
 
@@ -175,13 +175,13 @@ Where:
 
 The performance index or quadratic cost function J must be minimised by adjusting both the weighting Q and R matrices, where Q is a diagonal positive definite and R is a positive constant. The desired closed-loop performance is then obtained by tuning the weighting matrices, by penalising bad performance by adjusting the Q matrix or penalising actuator effort by adjusting the R matrix until suitable results regarding the cost function are reached for the plant.
 
-Based on equation 11, the feedback regulator and solution and to the performance index in is given by:
+Based on equation 10, the feedback regulator and solution and to the performance index in is given by:
 
 ![image](https://user-images.githubusercontent.com/73448401/100003103-77635700-2dbd-11eb-902b-12806bd452c8.png)
 
 **Equation 14**
 
-Meaning that both the A and B matrices must correspond to the actuator control force in the feedback regulator, giving the matrices shown in equation 16:
+Meaning that both the A and B matrices must correspond to the actuator control force in the feedback regulator, giving the matrices shown in equation 15:
 
 ![image](https://user-images.githubusercontent.com/73448401/100003163-8b0ebd80-2dbd-11eb-81c1-6bb7f948a8fa.png)
 
@@ -248,7 +248,7 @@ The first step when designing the system was to create the rail disturbance that
 
 The second rail disturbance (RD2), also shown in Figure 12, is presented in the form of a pulse width modulation, attributing square waved impulses at six-second intervals shown in Figure 14. The amplitude disturbance height chosen was 0.1m with a pulse width of 50% of the period, which is three seconds and a phase delay of 0.1 seconds. The second disturbance was chosen to be the worst-case scenario for the active suspension system and is used in the robustness test, which will be discussed later in this dissertation in the results and discussion section.
 
-The next step was to create a first-order filter for the rail disturbances and derivative block to get their velocities, as shown in Figure 15. For railway vehicle, the railway disturbance would not necessarily be a sharp step disturbance but rather a smoother edge disturbance with some angle present, which is why a filter will be used to smooth out the disturbance. A first-order filter in the form of a transfer function shown in equation 19 was used to smooth out the results generated from both the step input in RD1 and the pulse width generator for RD2, as their derivatives will be taken later and to ensure the simulation is producing accurate results. 
+The next step was to create a first-order filter for the rail disturbances and derivative block to get their velocities, as shown in Figure 15. For railway vehicle, the railway disturbance would not necessarily be a sharp step disturbance but rather a smoother edge disturbance with some angle present, which is why a filter will be used to smooth out the disturbance. A first-order filter in the form of a transfer function was used to smooth out the results generated from both the step input in RD1 and the pulse width generator for RD2, as their derivatives will be taken later and to ensure the simulation is producing accurate results. 
 
 ![image](https://user-images.githubusercontent.com/73448401/100008406-569eff80-2dc5-11eb-9368-9a0a26930c1b.png)
 
