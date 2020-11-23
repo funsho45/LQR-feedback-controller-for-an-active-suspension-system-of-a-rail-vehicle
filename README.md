@@ -44,12 +44,12 @@ The input parameter values of both the passive and active suspension systems for
 
 | Parameters | Values       |
 |------------|--------------|
-| M_s        | 5333 kg      |
-| M_us       | 906.5 kg     |
-| K_s        | 430,000 N/m  |
-| K_us       | 2,440000 N/m |
-| B_s        | 20,000 sec/m |
-| B_us       | 40,000 sec/m |
+| ![](https://latex.codecogs.com/png.latex?M_%7Bs%7D)        | 5333 kg      |
+| ![](https://latex.codecogs.com/png.latex?M_%7Bus%7D)       | 906.5 kg     |
+| ![](https://latex.codecogs.com/png.latex?K_%7Bs%7D)         | 430,000 N/m  |
+| ![](https://latex.codecogs.com/png.latex?K_%7Bus%7D)        | 2,440000 N/m |
+| ![](https://latex.codecogs.com/png.latex?B_%7Bs%7D)         | 20,000 sec/m |
+| ![](https://latex.codecogs.com/png.latex?B_%7Bus%7D)        | 40,000 sec/m |
 
 **Table 2**: Quarter rail model design parameters
 
@@ -332,12 +332,12 @@ A square signal amplitude representing a railway disturbance height of 0.1m with
 | Modified Quarter rail vehicle design parameters |              |
 |-------------------------------------------------|--------------|
 | Parameters                                      | Values       |
-| M_s                                             | 8532.8 kg    |
-| M_us                                            | 906.5 kg     |
-| K_s                                             | 361,200 N/m  |
-| K_us                                            | 2,440000 N/m |
-| B_s                                             | 14,600 sec/m |
-| B_us                                            | 40,000 sec/m |
+| ![](https://latex.codecogs.com/png.latex?M_%7Bs%7D)                                            | 8532.8 kg    |
+| ![](https://latex.codecogs.com/png.latex?M_%7Bus%7D)                                            | 906.5 kg     |
+| ![](https://latex.codecogs.com/png.latex?K_%7Bs%7D)                                             | 361,200 N/m  |
+| ![](https://latex.codecogs.com/png.latex?K_%7Bus%7D)                                            | 2,440000 N/m |
+| ![](https://latex.codecogs.com/png.latex?B_%7Bs%7D)                                             | 14,600 sec/m |
+| ![](https://latex.codecogs.com/png.latex?B_%7Bus%7D)                                            | 40,000 sec/m |
 
 The feedback gain vector, K, obtained for this robustness assessment is:
 
