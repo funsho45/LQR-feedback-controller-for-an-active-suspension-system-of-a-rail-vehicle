@@ -304,6 +304,10 @@ Figure 42 shown below is for the active suspensions and the comparison between t
 
 Figure 42: Time response for the body displacements for the active suspension system
 
+![image](https://user-images.githubusercontent.com/73448401/100021219-0c277e00-2dd9-11eb-9518-a7a23bda7db9.png)
+
+Figure 41: Time response of the body displacements for the passive suspension system
+
 ## Robustness Assessment
 
 After the design and testing of the LQR controller for the active suspension system, a robustness test is carried out. The primary reason for this test is that when using an LQR control for a system, there is no guarantee that the stability margins will stay in place if the parameters of the system are modified. In order to ensure that a change in the parameters does not result in a considerable decline in the performance of the active suspension system, performing a robustness assessment is essential. The test also demonstrated that the system could have perhaps some flexibility in the changed parameters.
@@ -338,7 +342,9 @@ The results of the robustness test are shown below:
 
 ![image](https://user-images.githubusercontent.com/73448401/100020779-4d6b5e00-2dd8-11eb-9c70-b73203602563.png)
 
+![image](https://user-images.githubusercontent.com/73448401/100021090-d4b8d180-2dd8-11eb-8561-2e1acf37d936.png)
+
 ## Summary
-A robustness test was carried out on the selected modified parameters; the sprung mass, the suspension stiffness and its damping coefficient. The test demonstrated very little change in the performance in terms of ride comfort, with the only significant change being in the force results for the actuator showing that 70% increases in force is needed in order to control the system and produce similar results as the LQR controller with the initial parameters. Moreover, it shows that with the modified parameters selected, the active suspension system, with LQR control strategy in place, demonstrates its robustness and can adapt relatively well with variations of parameters chosen for robustness check.
+The test demonstrated very little change in the performance in terms of ride comfort, with the only significant change being in the force results for the actuator showing that 70% increases in force is needed in order to control the system and produce similar results as the LQR controller with the initial parameters. Moreover, it shows that with the modified parameters selected, the active suspension system, with LQR control strategy in place, demonstrates its robustness and can adapt relatively well with variations of parameters chosen for robustness check.
 
 
