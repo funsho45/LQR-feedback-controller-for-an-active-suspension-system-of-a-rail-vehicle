@@ -156,8 +156,6 @@ Substituting this into equation 7 will give the state space equation for the clo
 
 ![image](https://user-images.githubusercontent.com/73448401/100002801-f7d58800-2dbc-11eb-830b-1426b171603d.png)
 
-**Equation 12**
-
 Figure 11: A full-state feedback block diagram
 
 ## LINEAR QUADRATIC REGULATOR (LQR) 
@@ -168,13 +166,13 @@ The primary function of an LQR controller is to minimise the cost function, J, t
 
 ![image](https://user-images.githubusercontent.com/73448401/100002881-218eaf00-2dbd-11eb-9d08-ebfc48406942.png)
 
-**Equation 13**
+**Equation 12**
 
 Where:
 
 ![image](https://user-images.githubusercontent.com/73448401/100002969-497e1280-2dbd-11eb-892b-97937a926d43.png)
 
-**Equation 14**
+**Equation 13**
 
 The performance index or quadratic cost function J must be minimised by adjusting both the weighting Q and R matrices, where Q is a diagonal positive definite and R is a positive constant. The desired closed-loop performance is then obtained by tuning the weighting matrices, by penalising bad performance by adjusting the Q matrix or penalising actuator effort by adjusting the R matrix until suitable results regarding the cost function are reached for the plant.
 
@@ -182,13 +180,13 @@ Based on equation 11, the feedback regulator and solution and to the performance
 
 ![image](https://user-images.githubusercontent.com/73448401/100003103-77635700-2dbd-11eb-902b-12806bd452c8.png)
 
-**Equation 15**
+**Equation 14**
 
 Meaning that both the A and B matrices must correspond to the actuator control force in the feedback regulator, giving the matrices shown in equation 16:
 
 ![image](https://user-images.githubusercontent.com/73448401/100003163-8b0ebd80-2dbd-11eb-81c1-6bb7f948a8fa.png)
 
-**Equation 16**
+**Equation 15**
 
 ## LQR CONTROLLER MATLAB IMPLEMENTATION
 
