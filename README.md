@@ -121,10 +121,9 @@ Using the equations of motion found in equations 3, 4, 5 and 6, the state-space 
 
 ![image](https://user-images.githubusercontent.com/73448401/100002119-0a02f680-2dbc-11eb-900f-c9c6adb3e201.png)
 
-**Equation 8**
-
 ![image](https://user-images.githubusercontent.com/73448401/100002180-1be49980-2dbc-11eb-95a0-f8631c49a811.png)
 
+**Equation 8**
 
 ## STATE-SPACE CONTROLLABILITY
 
