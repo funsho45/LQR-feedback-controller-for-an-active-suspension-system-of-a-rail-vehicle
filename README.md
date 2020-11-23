@@ -226,9 +226,34 @@ So, the feedback gain vector obtained is:
 
 ![image](https://user-images.githubusercontent.com/73448401/100003356-d6c16700-2dbd-11eb-824f-6113a3305fce.png)
 
+## SIMULINK MODEL
+
+Both the active and passive suspension systems can now be modelled in Simulink using the state-space model and the LQR controller. The block diagrams below describe the modelling process of the active and passive suspension models and the function of the various subsystems.
+
+The first step when designing the system was to create the rail disturbance that will excite both the passive and active suspensions shown in Figure 12. The first rail disturbance (RD1) is in the form of a simple step input with a step disturbance height of 0.06m. The step block gives a step input between two definable values at a specific time, for the simulated model a step time of 0 seconds was chosen with an initial value of 0 also selected as shown in Figure 13.
+
+The second rail disturbance (RD2), also shown in Figure 12, is presented in the form of a pulse width modulation, attributing square waved impulses at six-second intervals shown in Figure 14. The amplitude disturbance height chosen was 0.1m with a pulse width of 50% of the period, which is three seconds and a phase delay of 0.1 seconds. The second disturbance was chosen to be the worst-case scenario for the active suspension system and is used in the robustness test, which will be discussed later in this dissertation in the results and discussion section.
+
+The next step was to create a first-order filter for the rail disturbances and derivative block to get their velocities, as shown in Figure 15. For railway vehicle, the railway disturbance would not necessarily be a sharp step disturbance but rather a smoother edge disturbance with some angle present, which is why a filter will be used to smooth out the disturbance. A first-order filter in the form of a transfer function shown in equation 19 was used to smooth out the results generated from both the step input in RD1 and the pulse width generator for RD2, as their derivatives will be taken later and to ensure the simulation is producing accurate results. 
+
+![image](https://user-images.githubusercontent.com/73448401/100008406-569eff80-2dc5-11eb-9368-9a0a26930c1b.png)
 
 
+To model the open-loop plant, a state-space block will be used, as shown in Figure 21. The state-space block is used to implement the suspension systems behaviour, which was defined in equation 7
 
+![image](https://user-images.githubusercontent.com/73448401/100007945-b21cbd80-2dc4-11eb-9e70-ba8466427291.png)
+
+Both the state-space models for the active and passive suspension systems are all made into two subsystems, as shown below in Figure 25.
+
+![image](https://user-images.githubusercontent.com/73448401/100007204-a4b30380-2dc3-11eb-9eb0-0be5abb6f865.png)
+
+The active suspension system, on the other hand, has a control element, and all the state variables outputted from the suspension system is feedback to the control input through the gain K, generating the actuator force to stabilise the system shown in Figure 29. 
+
+![image](https://user-images.githubusercontent.com/73448401/100007403-f065ad00-2dc3-11eb-9c10-9cca40b53bf5.png)
+
+The results for the suspension travel in the sprung mass acceleration are inputted into a workspace through workspace blocks that write signal data into the workspace module in MATLAB.
+
+In order to get the displacements for the sprung mass and the unsprung mass of the railway vehicle for the active suspension system, calculations were carried out, as shown in Figure 31. A summation of the suspension travel, the wheel deflection and the rail disturbance displacement were calculated 
 
 
 
