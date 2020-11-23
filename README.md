@@ -37,25 +37,7 @@ In order to analyse the parameters related to the suspension system, a simplifie
 
 Where:
 
-M_s= Represents the railway vehicles body mass or sprung mass.
-
-M_us= Represents the unsprung mass of the railway vehicle including the bogie, wheel and other associated parts
-
-K_s= Represents the suspension systems spring constant for the sprung mass.
-
-K_us= Represents the suspension systems spring constant for the unsprung mass.
-
-B_s= Represents the inherent damping coefficient for the suspension system.
-
-B_us=Represents the inherent damping coefficient for the railway vehicles wheel assembly.
-
-F_c= The active suspensions actuator control force.
-
-Z_s= Represents the railway vehicles (sprung mass) body displacement.
-
-Z_us= Represents the railway vehicles wheel displacement and the unsprung masses displacement
-
-Z_r= Represents the excitation due to the railway disturbance.
+![image](https://user-images.githubusercontent.com/73448401/100023942-c8834300-2ddd-11eb-916a-c1c26ef0bbec.png)
 
 ### QUARTER RAIL VEHICLE MODEL DESIGN PARAMETERS
 The input parameter values of both the passive and active suspension systems for the railcar model which will be used for analysis and produce results are given in **Table 2**.
@@ -75,33 +57,47 @@ The input parameter values of both the passive and active suspension systems for
 
 The equations of motion considered for both the passive and the active suspension systems are derived using Newton second law of motion. 
 
-![](https://latex.codecogs.com/png.latex?F%3Dma)
+![](https://latex.codecogs.com/png.latex?F%3Dma) 
+
+**Equation 1**
 
 Transposed for the acceleration, the equation now becomes:
 
 ![](https://latex.codecogs.com/png.latex?a%3DF/m)
 
+**Equation 2**
+
 So, from the figure above, Newton's law of motion, the dynamic equation of the active suspension system and with the forces acting on the sprung mass, the following equation is given:
 
 ![image](https://user-images.githubusercontent.com/73448401/100001126-8e547a00-2dba-11eb-83e9-788698eccd1e.png)
+
+**Equation 3**
 
 Transposed for the sprung mass acceleration, the equation now becomes:
 
 ![image](https://user-images.githubusercontent.com/73448401/100001201-afb56600-2dba-11eb-9cad-d3a30e3f30b1.png)
 
+**Equation 4**
+
 The forces acting on the unsprung mass are the following:
 
 ![image](https://user-images.githubusercontent.com/73448401/100001304-d70c3300-2dba-11eb-9795-56c827f5854c.png)
 
+**Equation 5**
+
 Transposed for the unsprung mass acceleration, the equation now becomes:
 
 ![image](https://user-images.githubusercontent.com/73448401/100001341-edb28a00-2dba-11eb-8381-a715459233f0.png)
+
+**Equation 6**
 
 ## STATE SPACE REPRESENTATION
 
 The general state-space representation is given by the following:
 
 ![image](https://user-images.githubusercontent.com/73448401/100001556-3e29e780-2dbb-11eb-87fa-16273d1bc658.png)
+
+**Equation 7**
 
 Where: 
 
@@ -125,7 +121,10 @@ Using the equations of motion found in equations 3, 4, 5 and 6, the state-space 
 
 ![image](https://user-images.githubusercontent.com/73448401/100002119-0a02f680-2dbc-11eb-900f-c9c6adb3e201.png)
 
+**Equation 8**
+
 ![image](https://user-images.githubusercontent.com/73448401/100002180-1be49980-2dbc-11eb-95a0-f8631c49a811.png)
+
 
 ## STATE-SPACE CONTROLLABILITY
 
@@ -133,10 +132,11 @@ There are many problems when it comes to control systems such as stabilising uns
 
 ![image](https://user-images.githubusercontent.com/73448401/100002251-3880d180-2dbc-11eb-973a-445eff8e4a37.png)
 
+**Equation 9**
+
 Where:
 
 ![image](https://user-images.githubusercontent.com/73448401/100002300-4898b100-2dbc-11eb-9bea-2bdaaa3c1840.png)
-
 
 
 ## FULL STATE VARIABLE FEEDBACK CONTROL
@@ -146,11 +146,17 @@ Shown in Figure 11, the state space matrix is the plant with each state variable
 
 ![image](https://user-images.githubusercontent.com/73448401/100002695-d4124200-2dbc-11eb-8983-ca938ebe626e.png)
 
+**Equation 10**
+
 Substituting this into equation 7 will give the state space equation for the closed-loop system:
 
 ![image](https://user-images.githubusercontent.com/73448401/100002762-ec825c80-2dbc-11eb-9f9a-b9b48b1ae28c.png)
 
+**Equation 11**
+
 ![image](https://user-images.githubusercontent.com/73448401/100002801-f7d58800-2dbc-11eb-830b-1426b171603d.png)
+
+**Equation 12**
 
 Figure 11: A full-state feedback block diagram
 
@@ -162,10 +168,13 @@ The primary function of an LQR controller is to minimise the cost function, J, t
 
 ![image](https://user-images.githubusercontent.com/73448401/100002881-218eaf00-2dbd-11eb-9d08-ebfc48406942.png)
 
+**Equation 13**
+
 Where:
 
 ![image](https://user-images.githubusercontent.com/73448401/100002969-497e1280-2dbd-11eb-892b-97937a926d43.png)
 
+**Equation 14**
 
 The performance index or quadratic cost function J must be minimised by adjusting both the weighting Q and R matrices, where Q is a diagonal positive definite and R is a positive constant. The desired closed-loop performance is then obtained by tuning the weighting matrices, by penalising bad performance by adjusting the Q matrix or penalising actuator effort by adjusting the R matrix until suitable results regarding the cost function are reached for the plant.
 
@@ -173,9 +182,13 @@ Based on equation 11, the feedback regulator and solution and to the performance
 
 ![image](https://user-images.githubusercontent.com/73448401/100003103-77635700-2dbd-11eb-902b-12806bd452c8.png)
 
+**Equation 15**
+
 Meaning that both the A and B matrices must correspond to the actuator control force in the feedback regulator, giving the matrices shown in equation 16:
 
 ![image](https://user-images.githubusercontent.com/73448401/100003163-8b0ebd80-2dbd-11eb-81c1-6bb7f948a8fa.png)
+
+**Equation 16**
 
 ## LQR CONTROLLER MATLAB IMPLEMENTATION
 
@@ -207,6 +220,8 @@ The controllability of the open-loop system has already been determined so the w
 
 ![image](https://user-images.githubusercontent.com/73448401/100003276-b691a800-2dbd-11eb-87b1-1457f75f1663.png)
 
+**Equation 16**
+
 By entering the Q and R weighting matrices, the feedback gain vector K was obtained using the following MATLAB command:
 ```
 lqr( A, B(:,2), Q, R )
@@ -225,6 +240,8 @@ K =
 So, the feedback gain vector obtained is:
 
 ![image](https://user-images.githubusercontent.com/73448401/100003356-d6c16700-2dbd-11eb-824f-6113a3305fce.png)
+
+**Equation 17**
 
 ## SIMULINK MODEL
 
@@ -329,8 +346,9 @@ The feedback gain vector, K, obtained for this robustness assessment is:
 
 ![image](https://user-images.githubusercontent.com/73448401/100020618-07ae9580-2dd8-11eb-9c26-afc4ee1e2097.png)
 
-The results of the robustness test are shown below:
+**Equation 18**
 
+The results of the robustness test are shown below:
 
 ![image](https://user-images.githubusercontent.com/73448401/100020743-39bff780-2dd8-11eb-8723-841b26f6baa7.png)
 
