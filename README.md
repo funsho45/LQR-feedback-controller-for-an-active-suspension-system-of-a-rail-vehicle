@@ -303,3 +303,42 @@ Figure 42 shown below is for the active suspensions and the comparison between t
 ![image](https://user-images.githubusercontent.com/73448401/100020038-0c267e80-2dd7-11eb-9c29-30993b269a48.png)
 
 Figure 42: Time response for the body displacements for the active suspension system
+
+## Robustness Assessment
+
+After the design and testing of the LQR controller for the active suspension system, a robustness test is carried out. The primary reason for this test is that when using an LQR control for a system, there is no guarantee that the stability margins will stay in place if the parameters of the system are modified. In order to ensure that a change in the parameters does not result in a considerable decline in the performance of the active suspension system, performing a robustness assessment is essential. The test also demonstrated that the system could have perhaps some flexibility in the changed parameters.
+
+
+A square signal amplitude representing a railway disturbance height of 0.1m with a period of six seconds was used to simulate the rail disturbance for this robustness test, as a worst-case scenario.
+
+| Modified Quarter rail vehicle design parameters |              |
+|-------------------------------------------------|--------------|
+| Parameters                                      | Values       |
+| M_s                                             | 8532.8 kg    |
+| M_us                                            | 906.5 kg     |
+| K_s                                             | 361,200 N/m  |
+| K_us                                            | 2,440000 N/m |
+| B_s                                             | 14,600 sec/m |
+| B_us                                            | 40,000 sec/m |
+
+The feedback gain vector, K, obtained for this robustness assessment is:
+
+![image](https://user-images.githubusercontent.com/73448401/100020618-07ae9580-2dd8-11eb-9c26-afc4ee1e2097.png)
+
+The results of the robustness test are shown below:
+
+
+![image](https://user-images.githubusercontent.com/73448401/100020743-39bff780-2dd8-11eb-8723-841b26f6baa7.png)
+
+![image](https://user-images.githubusercontent.com/73448401/100020754-447a8c80-2dd8-11eb-8661-9ef5659e2c7e.png)
+
+![image](https://user-images.githubusercontent.com/73448401/100020761-46445000-2dd8-11eb-868d-298e2326b8d9.png)
+
+![image](https://user-images.githubusercontent.com/73448401/100020770-493f4080-2dd8-11eb-8a19-a4581a093c3d.png)
+
+![image](https://user-images.githubusercontent.com/73448401/100020779-4d6b5e00-2dd8-11eb-9c70-b73203602563.png)
+
+## Summary
+A robustness test was carried out on the selected modified parameters; the sprung mass, the suspension stiffness and its damping coefficient. The test demonstrated very little change in the performance in terms of ride comfort, with the only significant change being in the force results for the actuator showing that 70% increases in force is needed in order to control the system and produce similar results as the LQR controller with the initial parameters. Moreover, it shows that with the modified parameters selected, the active suspension system, with LQR control strategy in place, demonstrates its robustness and can adapt relatively well with variations of parameters chosen for robustness check.
+
+
