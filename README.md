@@ -1,4 +1,4 @@
-# An-LQR-feedback-controller-for-an-active-suspension-system-of-a-rail-vehicle
+# An LQR feedback controller for an active suspension system of a rail-vehicle
 Modelling and control of a railway vehicle active suspension system to improve the reduction in vibrations in the vehicle. 
 
 # What is this?
@@ -75,7 +75,7 @@ The input parameter values of both the passive and active suspension systems for
 
 The equations of motion considered for both the passive and the active suspension systems are derived using Newton second law of motion. 
 
-█(F=ma #(1) )
+
 
 
 
