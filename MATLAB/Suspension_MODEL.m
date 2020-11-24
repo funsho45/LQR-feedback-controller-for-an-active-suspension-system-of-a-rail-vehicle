@@ -1,5 +1,5 @@
 %{ 
-Name:FUNSHO ADEBARI, KU NO:K1447508
+Name:FUNSHO ADEBARI
 Project: Modelling and control of a railway vehicle suspension system
 %}
 
