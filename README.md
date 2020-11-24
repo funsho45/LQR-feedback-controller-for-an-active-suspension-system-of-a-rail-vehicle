@@ -1,3 +1,5 @@
+<img src="https://user-images.githubusercontent.com/73448401/100031380-6c281f80-2ded-11eb-956b-d002b469118f.png" align="right" width="300" alt="header pic"/>
+
 # An LQR feedback controller for an active suspension system of a rail vehicle
 Modelling and control of a railway vehicle active suspension system to improve the reduction in vibrations in the vehicle. 
 
